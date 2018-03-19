@@ -1,2 +1,2 @@
 # MinnowDelegationUI
-A user interface to help minnowdelegation delegators
+A user interface to help minnowdelegation delegators. This project aims to show all the required details about a user in one place instead of having to navigate between websites. As well as having everything necessary in one place, a "quick analyze" button will be available for delegators who don't have the time to go case by case. After clicking this button, conditions that are and aren't met will be clearly shown to the delegator who will then decide whether he still wants to delegate or not. While those conditions are those of minnowdelegation by default, delegators will be able to override most of them.
