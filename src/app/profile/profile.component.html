@@ -1,0 +1,16 @@
+<ng-container *ngIf="validAccount; else notValid">
+    Pseudo: {{ account.profile.name ? account.profile.name : username }} {{ account.reputation ? '(' + account.reputation + ')' : '' }}
+    <br>
+    Post d'introduction: 
+    <ng-container *ngIf="introductionPost.analyzed; else analyzing">
+        <a *ngIf="introductionPost.post; else none" href="https://www.steemit.com{{ introductionPost.post.url }}">{{ introductionPost.post.title }}</a>
+    </ng-container>
+    <br>
+    Voting Power: {{ votingPower }}%
+    <br>
+    Bandwidth Remaining: {{ bandwidth.allocated ? ((bandwidth.allocated - bandwidth.used) / bandwidth.allocated * 100).toFixed(2) : '' }}%
+</ng-container>
+
+<ng-template #notValid>Le pseudo que vous avez écrit n'est pas valide.</ng-template>
+<ng-template #analyzing>en cours d'analyse.</ng-template>
+<ng-template #none>aucun.</ng-template>
